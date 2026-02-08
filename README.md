@@ -29,10 +29,10 @@ The study evaluated the models across metrics critical for imbalance problems (R
 
 ### 1. The "Smart" Preprocessing Engine
 To handle 50 diverse datasets without manual intervention, I built an automated cleaning class:
-* **Dynamic Type Detection:** Automatically separates features into Binary, Categorical, and Numerical.
-* **Smart Imputation:** * *Categorical/Binary:* Imputed using Mode.
-    * *Numerical:* Imputed using K-Nearest Neighbors (KNN).
-* **Encoding:** Auto-switches between Label Encoding (for high cardinality) and One-Hot Encoding based on unique value thresholds.
+-  **Dynamic Type Detection:** Automatically separates features into Binary, Categorical, and Numerical.
+-  **Smart Imputation:** *Categorical/Binary:* Imputed using Mode.
+   -  *Numerical:* Imputed using K-Nearest Neighbors (KNN).
+- **Encoding:** Auto-switches between Label Encoding (for high cardinality) and One-Hot Encoding based on unique value thresholds.
 
 ### 2. Algorithmic Implementation (From Scratch)
 Instead of using `sklearn.linear_model`, I implemented the math manually to allow for custom loss manipulation:
@@ -41,7 +41,7 @@ Instead of using `sklearn.linear_model`, I implemented the math manually to allo
   
   $$J(\theta) = - \frac{1}{N} \sum [ w_{pos} \cdot y \log(\hat{y}) + w_{neg} \cdot (1-y) \log(1-\hat{y}) ]$$
   
-  *Where $w$ is dynamically calculated based on the imbalance ratio of the specific dataset being processed.*
+  *Where w is dynamically calculated based on the imbalance ratio of the specific dataset being processed.*
 
 ---
 
