@@ -42,15 +42,6 @@ Instead of using `sklearn.linear_model`, I implemented the math manually to allo
 
 ---
 
-## 📊 Visual Insights
-The pipeline automatically generates HTML reports comparing the decision boundaries and ROC curves for all processed datasets.
-
-| Metric Analysis |
-| :--- |
-| <img src="https://via.placeholder.com/800x400?text=Plotly+Interactive+Dashboard+Snapshot" alt="Plotly Dashboard"> |
-| *The pipeline utilizes Plotly to render interactive bar charts comparing Accuracy vs. Recall across the three model stages.* |
-
----
 
 ## 🛠️ Installation & Usage
 
